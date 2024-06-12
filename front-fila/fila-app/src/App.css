@@ -1,0 +1,109 @@
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.AppBar {
+  background-color: #333;
+}
+
+.Toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.Toolbar .MuiTypography-root {
+  color: #fff;
+}
+
+.Toolbar .MuiButton-root {
+  color: #fff;
+}
+
+.Container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.MenuClienteFuncionario {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.MenuClienteFuncionario a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.MenuClienteFuncionario a:hover {
+  text-decoration: underline;
+}
+
+.MuiCard-root {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.MuiCardContent-root {
+  text-align: center;
+}
+
+.MuiTypography-h4 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.MuiTypography-h6 {
+  color: #333;
+  font-weight: bold;
+}
+
+.FilasGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.FilaCard {
+  width: 300px;
+  margin: 15px;
+}
+
+/* Estilos adicionais para botões no menu */
+.MenuClienteFuncionario .MuiButton-root {
+  background-color: #007bff;
+  color: #fff;
+  margin: 0 10px;
+  padding: 10px 20px;
+  text-transform: none;
+}
+
+.MenuClienteFuncionario .MuiButton-root:hover {
+  background-color: #0056b3;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  .MenuClienteFuncionario {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MenuClienteFuncionario a {
+    margin: 5px 0;
+  }
+}
+

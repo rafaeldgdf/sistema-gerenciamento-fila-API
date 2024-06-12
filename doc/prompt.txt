@@ -1,0 +1,17 @@
+netstat -ano | findstr :3333
+taskkill /PID 8888 /F
+
+
+npm run initFilas
+npm start 
+
+
+sql 
+mysql -u root -p
+USE sistemafila_novo;
+SELECT * FROM clientes;
+
+
+
+
+
