@@ -23,9 +23,10 @@ const ClienteForm = ({ socket }) => {
 
   return (
     <div>
-      <h1>Cadastrar Cliente</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className='tituloInputs'>Cadastrar Cliente</h1>
+      <form onSubmit={handleSubmit} className='inputs'>
         <input
+          className='inputCadastro'
           type="text"
           placeholder="Nome"
           value={name}
@@ -35,9 +36,11 @@ const ClienteForm = ({ socket }) => {
           type="number"
           placeholder="Lugares"
           value={lugares}
+          min="0"
           onChange={(e) => setLugares(e.target.value)}
+          className='inputCadastro'
         />
-        <button type="submit">Entrar na Fila</button>
+        <button type="submit" id='entrarFila'>Entrar na Fila</button>
       </form>
       {message && <p>{message}</p>}
       {error && <p>{error}</p>}

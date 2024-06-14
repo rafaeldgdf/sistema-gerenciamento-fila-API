@@ -24,15 +24,16 @@ const StatusCliente = () => {
 
   return (
     <div>
-      <h1>Status Cliente</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="tituloInputs">Status Cliente</h1>
+      <form onSubmit={handleSubmit} className='inputs'>
         <input
+          id='inputSenha'
           type="text"
           placeholder="Senha"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
-        <button type="submit">Verificar Status</button>
+        <button type="submit" id="verStatus">Verificar Status</button>
       </form>
       {posicao !== null && fila !== null && (
         <p>Você está na <strong>{posicao}ª</strong> posição na <strong>Fila de {fila} lugares</strong>.</p>

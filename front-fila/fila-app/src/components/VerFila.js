@@ -54,7 +54,7 @@ const VerFila = () => {
               >
                 Fila de {fila.capacidade} Lugares
               </Typography>
-              <Paper sx={{ backgroundColor: '#ddd', padding: 1, borderRadius: 1 }}>
+              <Paper sx={{ backgroundColor: '#000', padding: 1, borderRadius: 1 }}>
                 {fila.clientes.length > 0 ? (
                   fila.clientes.map((cliente, index) => (
                     <Typography

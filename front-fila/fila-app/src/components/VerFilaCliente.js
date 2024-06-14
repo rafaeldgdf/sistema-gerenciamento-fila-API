@@ -37,7 +37,7 @@ const VerFila = () => {
   }, []);
 
   return (
-    <Box sx={{ padding: '16px' }}>
+    <Box sx={{ padding: '16px', backgroundColor: 'rgb(63, 37, 13)'}}>
       <Typography variant="h4" align="center" gutterBottom>Filas</Typography>
       <Grid container spacing={2}>
         {filas.length > 0 ? (

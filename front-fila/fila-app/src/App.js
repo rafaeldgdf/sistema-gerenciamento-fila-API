@@ -13,19 +13,19 @@ const App = () => {
   return (
     <Router>
       <AppBar position="static">
-        <Toolbar style={{ justifyContent: 'space-between' }}>
+        <Toolbar style={{ justifyContent: 'space-between', background: 'rgb(63, 37, 13)',height: '110px'}}>
           <Box sx={{ display: 'flex' }}>
-            <Button color="inherit" component={Link} to="/cliente">CLIENTE</Button>
+            <Button id="buttonCliente" color="inherit" component={Link} to="/cliente">CLIENTE</Button>
           </Box>
           <Typography
             variant="h4"
             component="div"
-            sx={{ fontFamily: 'Impact', fontSize: '2rem', color: 'white', textAlign: 'center', flexGrow: 1 }}
+            sx={{ fontFamily: 'Josefin-Sans', fontSize: '2rem', color: 'white', textAlign: 'center', flexGrow: 1 }}
           >
-            SISTEMA DE GERENCIAMENTO DE FILA
+          <Typography variant='h4' id='tituloSGF'>SISTEMA DE GERENCIAMENTO DE FILA</Typography> 
           </Typography>
           <Box sx={{ display: 'flex' }}>
-            <Button color="inherit" component={Link} to="/funcionario">FUNCIONÁRIO</Button>
+            <Button id='buttonFuncionario' color="inherit" component={Link} to="/funcionario">FUNCIONÁRIO</Button>
           </Box>
         </Toolbar>
       </AppBar>
@@ -42,8 +42,8 @@ const App = () => {
 const ClienteView = () => (
   <>
     <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, marginTop: 2 }}>
-      <Button component={Link} to="/cliente/cadastrar">Cadastrar Cliente</Button>
-      <Button component={Link} to="/cliente/status">Status Cliente</Button>
+      <Button style={{color: '#56290F'}} className='status-cadastrar' component={Link} to="/cliente/cadastrar">Cadastrar Cliente</Button>
+      <Button className='status-cadastrar' style={{color: '#56290F'}} component={Link} to="/cliente/status">Status Cliente</Button>
     </Box>
     <Routes>
       <Route path="cadastrar" element={<ClienteForm socket={socket} />} />
