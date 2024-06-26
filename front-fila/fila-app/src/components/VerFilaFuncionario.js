@@ -79,7 +79,7 @@ const VerFilaFuncionario = () => {
               <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mb: 2 }}>
                 <Button
                   variant="contained"
-                  color="primary"
+                  style={{ backgroundColor: 'green', color: 'white' }}
                   size="small"
                   sx={{ minWidth: '100px', fontSize: '0.75rem', padding: '4px 8px' }}
                   onClick={() => handleChamarCliente(fila.id)}
@@ -88,7 +88,7 @@ const VerFilaFuncionario = () => {
                 </Button>
                 <Button
                   variant="contained"
-                  color="error"
+                  color='error'
                   size="small"
                   sx={{ minWidth: '100px', fontSize: '0.75rem', padding: '4px 8px' }}
                   onClick={() => handleRemoverCliente(fila.id)}
@@ -96,18 +96,18 @@ const VerFilaFuncionario = () => {
                   Remover
                 </Button>
               </Box>
-              <Paper sx={{ backgroundColor: '#000', padding: 1, borderRadius: 1 }}>
+              <Paper sx={{ backgroundColor: '#800000', padding: 1, borderRadius: 1 }}>
                 {fila.clientes.length > 0 ? (
                   fila.clientes.map((cliente, index) => (
                     <Typography
-                      key={cliente.id}
-                      style={{ color: '#000', fontWeight: index === 0 ? 'bold' : 'normal' }}
+                      key={cliente.id} 
+                      style={{ color: '#faf9f7', fontWeight: index === 0 ? 'bold' : 'normal' }}
                     >
-                      {index + 1}. {cliente.name} (Senha: {cliente.senha})
+                      {index + 1}. {cliente.name} | Senha: {cliente.senha}
                     </Typography>
                   ))
                 ) : (
-                  <Typography style={{ color: '#000' }}>Nenhum cliente na fila</Typography>
+                  <Typography style={{ color: '#faf9f7' }}>Nenhum cliente na fila</Typography>
                 )}
               </Paper>
             </CardContent>

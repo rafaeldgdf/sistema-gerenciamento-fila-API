@@ -1,4 +1,23 @@
 /* Estilos globais */
+
+
+
+
+.fila {
+  background-color: black; /* Fundo preto */
+  color: white; /* Texto branco */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.fila .titulo {
+  color: white; /* Título em branco */
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
@@ -106,7 +125,7 @@ body {
 }
 
 .MenuClienteFuncionario .MuiButton-root:hover {
-  background-color: #0056b3;
+  background-color: #00b318 !important;
 }
 
 #verStatus:hover {
@@ -194,6 +213,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+ 
 }
 
 .FilaCard {
@@ -203,7 +223,7 @@ body {
 
 /* Estilos adicionais para botões no menu */
 .MenuClienteFuncionario .MuiButton-root {
-  background-color: #007bff;
+  background-color: #33ff00;
   color: #fff;
   margin: 0 10px;
   padding: 10px 20px;
@@ -222,5 +242,14 @@ body {
   .MenuClienteFuncionario a {
     margin: 5px 0;
   }
+}
+
+.form-container {
+  text-align: center;
+}
+
+.message, .error {
+  text-align: center;
+  font-weight: bold;
 }
 

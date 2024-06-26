@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import io from 'socket.io-client';
+import './App.css'; // Certifique-se de importar seu CSS
 
 const socket = io('http://localhost:3333'); // Conectar ao backend
 
@@ -34,8 +35,8 @@ const FuncionarioView = () => {
     <div>
       <h1>Filas</h1>
       {filas.map((fila) => (
-        <div key={fila.id}>
-          <h2>Fila de {fila.capacidade} Lugares</h2>
+        <div key={fila.id} className="fila">
+          <h2 className="titulo">Fila de {fila.capacidade} Lugares</h2>
           {fila.clientes.length === 0 ? (
             <p>Nenhum cliente na fila</p>
           ) : (
@@ -47,7 +48,12 @@ const FuncionarioView = () => {
               ))}
             </ul>
           )}
-          <button onClick={() => handleChamarCliente(fila.id)}>Chamar Cliente</button>
+          <button 
+            className="green-button" 
+            onClick={() => handleChamarCliente(fila.id)}
+          >
+            Chamar Cliente
+          </button>
         </div>
       ))}
     </div>

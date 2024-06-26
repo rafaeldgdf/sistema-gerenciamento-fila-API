@@ -54,18 +54,18 @@ const VerFila = () => {
               >
                 Fila de {fila.capacidade} Lugares
               </Typography>
-              <Paper sx={{ backgroundColor: '#000', padding: 1, borderRadius: 1 }}>
+              <Paper sx={{ backgroundColor: '#800000', padding: 1, borderRadius: 1 }}>
                 {fila.clientes.length > 0 ? (
                   fila.clientes.map((cliente, index) => (
                     <Typography
                       key={cliente.id}
-                      style={{ color: '#000', fontWeight: index === 0 ? 'bold' : 'normal' }}
+                      style={{ color: '#faf9f7', fontWeight: index === 0 ? 'bold' : 'normal' }}
                     >
-                      {index + 1}. {cliente.name} (Senha: {cliente.senha})
+                      {index + 1}. {cliente.name} | Senha: {cliente.senha}
                     </Typography>
                   ))
                 ) : (
-                  <Typography style={{ color: '#000' }}>Nenhum cliente na fila</Typography>
+                  <Typography style={{ color: '#faf9f7' }}>Nenhum cliente na fila</Typography>
                 )}
               </Paper>
             </CardContent>
